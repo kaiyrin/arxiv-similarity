@@ -9,7 +9,8 @@ __pycache__/
 .eggs/
 build/
 dist/
-
+plots/
+plot/
 # Environment / secrets
 .env
 
@@ -27,3 +28,4 @@ data/
 *.json
 *.parquet
 kaggle.json
+jaccard_sim_local_copy.ipynb
