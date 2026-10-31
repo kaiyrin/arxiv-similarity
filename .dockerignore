@@ -1,0 +1,10 @@
+.venv/
+data/
+plots/
+.env
+.git/
+__pycache__/
+*.ipynb
+*.pdf
+*.zip
+*.csv

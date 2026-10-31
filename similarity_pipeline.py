@@ -35,7 +35,7 @@ STOPWORDS = {
 @dataclass(frozen=True)
 class Config:
     data_path: str = "data/arxiv-metadata-oai-snapshot.json"
-    sample_fraction: float = 0.08
+    sample_fraction: float = 0.05
     shingle_size: int = 3          # k-word shingles
     num_hashes: int = 100          # MinHash permutation functions
     num_bands: int = 20            # LSH bands (must divide num_hashes evenly)
@@ -313,7 +313,7 @@ def create_spark_session(app_name="ArxivSimilarAbstracts"):
     spark = (SparkSession.builder
              .appName(app_name)
              .master("local[*]")
-             .config("spark.driver.memory", "4g")
+             .config("spark.driver.memory", "2g")
              .config("spark.sql.shuffle.partitions", "16")
              .config("spark.jars.packages", "com.microsoft.sqlserver:mssql-jdbc:12.8.1.jre11")
              .getOrCreate())

@@ -1,30 +1,20 @@
-# Virtual environment
-.venv/
-venv/
-
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-.eggs/
-build/
-dist/
-
-# Environment / secrets
+# secrets
 .env
 
-# IDE
-.vscode/
-.idea/
-
-# OS
-.DS_Store
-
-# Jupyter
+# Python
+.venv/
+__pycache__/
+*.pyc
 .ipynb_checkpoints/
-# Data & credentials
+
+# data and large files
 data/
-*.json
-*.parquet
-kaggle.json
-jaccard_sim_local_copy.ipynb
+*.zip
+*.csv
+spark-warehouse/
+metastore_db/
+derby.log
+
+# Mac / editor
+.DS_Store
+.vscode/
