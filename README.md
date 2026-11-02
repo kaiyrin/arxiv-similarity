@@ -52,7 +52,7 @@ You can also connect any SQL client (Azure Data Studio, DBeaver, VS Code) to
 | `BandKeys` | LSH bucket of every paper per band |
 | `HashCoeffs` | MinHash coefficients (a, b) to rebuild signatures |
 
-## Try the API
+## Try the API ‎(skip if you already did step 2 above)
 
 ```bash
 docker compose run --rm --build pipeline   # 1. fill the database (once)
@@ -64,15 +64,17 @@ where you can click any endpoint → "Try it out" → "Execute".
 
 | Endpoint | Example |
 |---|---|
+| `GET /papers/{id}` | full title and abstract of `0704.0003` |
 | `GET /papers/{id}/similar` | papers similar to `0708.0098` |
 | `POST /similar` | paste any abstract and get matching papers |
 
 Or from the terminal:
 ```bash
-curl http://localhost:8000/papers/0708.0098/similar
-curl -X POST http://localhost:8000/similar -H "Content-Type: application/json" \
-     -d '{"abstract": "We study local Rademacher complexities and oracle inequalities ..."}'
+curl http://localhost:8000/papers/0708.0098/similar      # precomputed pairs
+curl http://localhost:8000/papers/0704.0003              # get a full abstract
 ```
+Copy the `abstract` from the second call into `POST /similar` on `/docs`.
+The paper should find itself with `jaccard: 1.0`.
 
 Stop everything: `docker compose down`
 
