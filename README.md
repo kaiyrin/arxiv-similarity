@@ -3,7 +3,8 @@
 Project for the Algorithms class. Finds pairs of arXiv papers with similar abstracts
 and stores the results in SQL Server.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kaiyrin/similarity_september26/blob/main/jaccard_sim.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kaiyrin/arxiv-similarity/blob/main/jaccard_sim.ipynb)
+
 
 **Just want to see the algorithm?** Open the Colab notebook above. It runs in the browser, no setup.
 **Just want to see results?** See [`results/query_results.txt`](results/query_results.txt).
