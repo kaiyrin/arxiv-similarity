@@ -7,7 +7,7 @@ import os
 import random
 import re
 import zlib
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 import pyodbc
 from dotenv import load_dotenv
@@ -31,15 +31,17 @@ STOPWORDS = {
     "improved","compared","existing","different","various","several",
 }
 
+def _env(name, default):
+    return os.environ.get(name, default)
 
 @dataclass(frozen=True)
 class Config:
-    data_path: str = "data/arxiv-metadata-oai-snapshot.json"
-    sample_fraction: float = 0.05
+    data_path: str = field(default_factory=lambda: _env("DATA_PATH", "data/arxiv-metadata-oai-snapshot.json"))
+    sample_fraction: float = field(default_factory=lambda: float(_env("SAMPLE_FRACTION", "0.05")))
     shingle_size: int = 3          # k-word shingles
     num_hashes: int = 100          # MinHash permutation functions
-    num_bands: int = 20            # LSH bands (must divide num_hashes evenly)
-    jaccard_threshold: float = 0.3
+    num_bands: int = field(default_factory=lambda: int(_env("NUM_BANDS", "20")))  # must divide num_hashes
+    jaccard_threshold: float = field(default_factory=lambda: float(_env("JACCARD_THRESHOLD", "0.3")))
     min_shingles: int = 5          # drop near-empty abstracts (caused false 1.000 matches)
     random_seed: int = 42
 
@@ -271,7 +273,9 @@ class SqlServerWriter:
         self.jdbc_url = (f"jdbc:sqlserver://{host}:{port};databaseName={database};"
                          "encrypt=true;trustServerCertificate=true")
         self._odbc = ("DRIVER={ODBC Driver 18 for SQL Server};"
-                      f"SERVER={host},{port};UID={user};PWD={password};TrustServerCertificate=yes")
+                      f"SERVER={host},{port};UID={user};PWD={{{password}}};"
+                      "Encrypt=yes;TrustServerCertificate=yes;")
+
 
     @classmethod
     def from_env(cls):
@@ -313,7 +317,7 @@ def create_spark_session(app_name="ArxivSimilarAbstracts"):
     spark = (SparkSession.builder
              .appName(app_name)
              .master("local[*]")
-             .config("spark.driver.memory", "2g")
+             .config("spark.driver.memory", os.environ.get("SPARK_DRIVER_MEMORY", "2g"))
              .config("spark.sql.shuffle.partitions", "16")
              .config("spark.jars.packages", "com.microsoft.sqlserver:mssql-jdbc:12.8.1.jre11")
              .getOrCreate())

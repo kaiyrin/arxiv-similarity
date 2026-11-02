@@ -10,6 +10,7 @@ services:
       - "1433:1433"
     volumes:
       - mssql-data:/var/opt/mssql
+      - ./sql:/sql:ro
     healthcheck:
       test: /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P "$${MSSQL_SA_PASSWORD}" -C -Q "SELECT 1"
       interval: 10s
@@ -22,8 +23,10 @@ services:
     env_file: .env
     environment:
       SQL_HOST: sqlserver
+      SQL_PASSWORD: ${SQL_PASSWORD}
     volumes:
       - ./data:/app/data
+      - ./sample:/app/sample:ro
       - ivy-cache:/root/.ivy2
       - ./similarity_pipeline.py:/app/similarity_pipeline.py
     depends_on:

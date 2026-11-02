@@ -1,5 +1,7 @@
 FROM python:3.12-slim-bookworm
 
+ENV PYTHONUNBUFFERED=1
+
 # Java for Spark + Microsoft ODBC Driver 18 for pyodbc
 RUN apt-get update && apt-get install -y --no-install-recommends \
         openjdk-17-jre-headless curl gnupg ca-certificates unixodbc-dev \
@@ -15,5 +17,4 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY similarity_pipeline.py .
-
 CMD ["python", "similarity_pipeline.py"]

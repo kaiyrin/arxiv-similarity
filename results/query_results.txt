@@ -1,0 +1,71 @@
+Papers
+------
+19901
+SimilarPairs
+------------
+80
+Jaccard PaperA TitleA PaperB TitleB
+------- ------ ------ ------ ------
+1.000 0708.0098 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex 0708.0121 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex
+1.000 0708.0098 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex 0708.0124 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex
+1.000 0708.0089 Discussion of "2004 IMS Medallion Lecture: Local Rademacher complexiti 0708.0121 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex
+1.000 0708.0089 Discussion of "2004 IMS Medallion Lecture: Local Rademacher complexiti 0708.0124 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex
+1.000 0708.0094 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex 0708.0121 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex
+1.000 0708.0089 Discussion of "2004 IMS Medallion Lecture: Local Rademacher complexiti 0708.0098 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex
+1.000 0708.0094 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex 0708.0124 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex
+1.000 0708.0094 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex 0708.0098 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex
+1.000 0708.0121 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex 0708.0124 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex
+1.000 0704.0489 Relativistic treatment in D-dimensions to a spin-zero particle with
+   0704.0573 Elativistic treatment in}$D$ - Dimensions to a spin-zero particle with
+1.000 0708.0317 Comment: Monitoring Networked Applications With Incremental Quantile
+  0708.0338 Comment: Monitoring Networked Applications With Incremental Quantile
+ 
+1.000 0708.0098 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex 0708.0132 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex
+1.000 0704.2327 Symmetries in the system of type $A_5^{(2)}$ 0704.2331 Symmetries in the system of type $D_4^{(1)}$
+1.000 0708.0089 Discussion of "2004 IMS Medallion Lecture: Local Rademacher complexiti 0708.0132 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex
+1.000 0705.0328 The Dynamical State fo the Starless Dense Core FeSt 1-457: A Pulsating 0705.0330 The Dynamical State of the Starless Dense Core FeSt 1-457: A Pulsating
+1.000 0708.0094 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex 0708.0132 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex
+1.000 0708.0287 Comment: Expert Elicitation for Reliable System Design 0708.0288 Comment: Expert Elicitation for Reliable System Design
+1.000 0708.0089 Discussion of "2004 IMS Medallion Lecture: Local Rademacher complexiti 0708.0094 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex
+1.000 0708.0124 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex 0708.0132 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex
+1.000 0708.0285 Comment: Expert Elicitation for Reliable System Design 0708.0288 Comment: Expert Elicitation for Reliable System Design
+PaperId Title Matches
+------- ----- -------
+0708.0089 Discussion of "2004 IMS Medallion Lecture: Local Rademacher complexiti 6
+0708.0094 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex 6
+0708.0098 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex 6
+0708.0121 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex 6
+0708.0124 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex 6
+0708.0132 Discussion of ``2004 IMS Medallion Lecture: Local Rademacher
+  complex 6
+0708.0135 Rejoinder: 2004 IMS Medallion Lecture: Local Rademacher complexities a 6
+0708.0285 Comment: Expert Elicitation for Reliable System Design 3
+0708.0287 Comment: Expert Elicitation for Reliable System Design 3
+0708.0288 Comment: Expert Elicitation for Reliable System Design 3
