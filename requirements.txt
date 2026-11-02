@@ -1,3 +1,5 @@
 pyspark>=4.0,<5.0
 python-dotenv
 pyodbc
+fastapi
+uvicorn[standard]

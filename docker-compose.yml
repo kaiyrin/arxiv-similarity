@@ -27,12 +27,26 @@ services:
     volumes:
       - ./data:/app/data
       - ./sample:/app/sample:ro
-      - ivy-cache:/root/.ivy2
-      - ./similarity_pipeline.py:/app/similarity_pipeline.py
+      - ivy-cache:/root/.ivy2.5.2
     depends_on:
       sqlserver:
         condition: service_healthy
     profiles: ["pipeline"]
+
+  api:
+    build: .
+    container_name: arxiv-api
+    env_file: .env
+    environment:
+      SQL_HOST: sqlserver
+      SQL_PASSWORD: ${SQL_PASSWORD}
+    command: ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "8000:8000"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    restart: on-failure
 
 volumes:
   mssql-data:
