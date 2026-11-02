@@ -7,6 +7,8 @@ and stores the results in SQL Server.
 
 **Just want to see the algorithm?** Open the Colab notebook above. It runs in the browser, no setup.
 **Just want to see results?** See [`results/query_results.txt`](results/query_results.txt).
+**Full write-up:** [report.pdf](report.pdf) · **Plots:** [plots/](plots/) (MinHash, LSH S-curve, Jaccard distributions)
+
 
 ## How it works
 1. **Shingling**: each abstract is cleaned and turned into a set of 3-word shingles.

@@ -31,8 +31,8 @@ STOPWORDS = {
     "improved","compared","existing","different","various","several",
 }
 
-def _env(name, default):
-    return os.environ.get(name, default)
+def _env(name, default) -> str:
+    return os.environ.get(name) or default
 
 @dataclass(frozen=True)
 class Config:
