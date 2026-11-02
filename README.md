@@ -52,6 +52,31 @@ You can also connect any SQL client (Azure Data Studio, DBeaver, VS Code) to
 | `BandKeys` | LSH bucket of every paper per band |
 | `HashCoeffs` | MinHash coefficients (a, b) to rebuild signatures |
 
+## Try the API
+
+```bash
+docker compose run --rm --build pipeline   # 1. fill the database (once)
+docker compose up -d --build api           # 2. start the API
+```
+
+Open **http://localhost:8000/docs** in your browser. There's an interactive page
+where you can click any endpoint → "Try it out" → "Execute".
+
+| Endpoint | Example |
+|---|---|
+| `GET /papers/{id}/similar` | papers similar to `0708.0098` |
+| `POST /similar` | paste any abstract and get matching papers |
+
+Or from the terminal:
+```bash
+curl http://localhost:8000/papers/0708.0098/similar
+curl -X POST http://localhost:8000/similar -H "Content-Type: application/json" \
+     -d '{"abstract": "We study local Rademacher complexities and oracle inequalities ..."}'
+```
+
+Stop everything: `docker compose down`
+
+
 ## Full dataset (optional)
 The repo includes a small sample in `sample/`. To use the full arXiv metadata:
 1. Download `arxiv-metadata-oai-snapshot.json` from the Kaggle dataset *Cornell-University/arxiv*.
