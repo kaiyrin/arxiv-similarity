@@ -17,11 +17,8 @@ and stores the results in SQL Server.
 
 ## Run it yourself (Docker)
 
-**You only need [Docker Desktop](https://www.docker.com/products/docker-desktop/).**
+**You only need [Docker Desktop].**
 Java, Spark, Python and SQL Server all run inside containers.
-
-> Apple Silicon Mac (M1/M2/M3/M4): in Docker Desktop → Settings → General,
-> turn on **"Use Rosetta for x86_64/amd64 emulation"**. The SQL Server image is Intel-only.
 
 ```bash
 git clone https://github.com/kaiyrin/similarity_september26.git
